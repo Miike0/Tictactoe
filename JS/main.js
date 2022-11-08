@@ -30,10 +30,10 @@ function playerPlays () {
         const row = i % 3;
         const column = parseInt(i / 3);
 
-        if (board[row][column] == '') {
+        if (board[column][row] == '') {
             cell.addEventListener('click', (e) => {
-                board[row][column] = 'O';
-                cell.textContent = board[row][column];
+                board[column][row] = 'O';
+                cell.textContent = board[column][row];
 
                 turn = 1;
                 const won = checkIfWinner();
